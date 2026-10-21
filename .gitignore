@@ -1,0 +1,18 @@
+# Do not upload intermediate files
+*.hwpx
+*.hwp
+*.xml
+*.xsl
+*.hml
+
+# Do not upload these image files
+*.gif
+*.wmf
+
+# Do not upload python cache
+__pycache__/
+*.pyc
+*.py
+
+# Also,
+*.ini

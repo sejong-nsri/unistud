@@ -1,0 +1,605 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-VBX4QX9HTX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-VBX4QX9HTX');
+  </script>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>National Strategy Research | Institute for Uninomic Studies</title>
+
+  <style>
+    html {
+      scrollbar-gutter: stable;
+    }
+    
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 900px;
+      margin: 60px auto;
+      line-height: 1.7;
+      padding: 0 20px;
+      color: #222;
+    }
+
+    h1 {
+        font-size: 40px;
+        margin-bottom: 10px;
+        transform: scaleX(0.95);
+        transform-origin: left center;
+    }
+
+    nav {
+      margin-bottom: 40px;
+    }
+
+    nav a {
+      margin-right: 20px;
+      text-decoration: none;
+      color: #003366;
+    }
+
+    section {
+      margin-top: 40px;
+    }
+
+    .text {
+      text-indent: 1em;
+      text-align: left;
+      word-break: keep-all;
+    }
+
+    .email {
+      font-weight: bold;
+    }
+
+    .topbar {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    margin-bottom: 20px;
+
+    color: #000000;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    }
+
+    .topbar-logo {
+    width: 24px;
+    height: auto;
+    }
+
+    .journal-info {
+    margin-top: 35px;
+    padding: 18px 22px;
+    background-color: #f7f7f7;
+    border-left: 4px solid #003366;
+    }
+
+    .journal-info p {
+      margin: 0;
+    }
+
+    .journal-title {
+      font-family: "Book Antiqua", "Palatino Linotype", Palatino, serif;
+      font-size: 40px;
+      font-weight: 600;
+      color: #C20F2F;
+      letter-spacing: 0.5px;
+    }
+
+    .journal-title .small-caps {
+      font-size: 80%;
+    }
+
+    .info-label {
+      font-weight: bold;
+      margin-right: 12px;
+    }
+
+    .info-label::after {
+      content: ":";
+    }
+  
+    details {
+      border-top: 1px solid #ddd;
+      padding: 16px 0;
+    }
+
+    summary {
+      cursor: pointer;
+      font-size: 22px;
+      font-weight: bold;
+    }
+
+    .issue {
+      margin-top: 15px;
+      font-weight: bold;
+    }
+
+    .articles {
+      margin-left: 14px;
+      margin-top: 8px;
+    }
+
+    .articles li {
+      margin-bottom: 6px;
+    }
+
+    .article-title {
+      margin-bottom: 0px;
+      word-break: keep-all;
+      font-weight: 500;
+    }
+
+    .article-link {
+        text-decoration: none;
+        font-weight: 500;
+    }
+
+    .article-link:hover {
+        text-decoration: underline;
+    }
+
+    .author {
+        color: #666666;
+        font-size: 16px;
+        margin-left: 0px;
+        margin-bottom: 4px;
+    }
+
+    .unpublished {
+      color: #000000;
+      font-weight: 500;
+    }
+
+
+    /* Shared journal header and switchable content */
+    .topbar {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 25px;
+      color: #222;
+      text-decoration: none;
+    }
+    .topbar-text {
+      font-family: "Book Antiqua", "Palatino Linotype", Palatino, serif;
+      font-size: 21px;
+      font-weight: 600;
+      letter-spacing: 0.3px;
+      transform: scaleX(0.95);
+      transform-origin: left center;
+    }
+    .topbar-logo { width: 30px; height: auto; }
+    .topbar:hover .topbar-text { color: #003366; }
+
+    nav { display: flex; gap: 24px; margin-bottom: 40px; }
+    nav button {
+      border: 0;
+      background: none;
+      padding: 0 0 5px;
+      font: inherit;
+      color: #003366;
+      cursor: pointer;
+      border-bottom: 2px solid transparent;
+    }
+    nav button[aria-selected="true"] {
+      font-weight: bold;
+      border-bottom-color: #003366;
+    }
+    nav button:hover { text-decoration: underline; }
+    .tab-panel[hidden] { display: none; }
+    @media (max-width: 600px) {
+      body { margin: 35px auto; padding: 0 20px; }
+      h1 { font-size: 28px; line-height: 1.3; word-break: keep-all; }
+      .topbar-text { font-size: 17px; line-height: 1.3; }
+      .topbar-logo { width: 26px; }
+    }
+  </style>
+</head>
+
+<body>
+  <a class="topbar" href="index.html">
+    <img class="topbar-logo" src="sejong-logo.png" alt="Sejong University logo">
+    <span class="topbar-text">Institute for Uninomic Studies</span>
+  </a>
+
+  <h1 class="journal-title">
+    U<span class="small-caps">NINOMIC </span>R<span class="small-caps">EVIEW</span>
+  </h1>
+
+  <nav aria-label="Journal sections" role="tablist">
+  <!--
+    aria-controls="about-panel" ===> In the <div>, id="about-panel".
+    id="about-tab" ===> In the <div>, aria-labelledby="about-tab".
+    aria-selected="ture": The default panel is the panel controlled by this button.
+    onclick=Triggers JavaScript
+   -->
+    <button type="button" id="about-tab" role="tab" aria-controls="about-panel" aria-selected="true" onclick="showTab('about')">About</button>
+    <button type="button" id="issues-tab" role="tab" aria-controls="issues-panel" aria-selected="false" onclick="showTab('issues')">Issues</button>
+  </nav>
+
+  <main>
+    <!---------------------->
+    <!-- PANEL FOR ABOUT -->
+    <!---------------------->
+    <div id="about-panel" class="tab-panel" role="tabpanel" aria-labelledby="about-tab">
+  <section>
+    <h2>학술지 <i>Uninomic Review</i> 소개</h2>
+
+    <p class="text">
+        세종대학교 유니노믹연구소가 발간하는 『유니노믹리뷰』(<i>Uninomic Review</i>)는
+        경제·사회 현상과 정책 및 제도 전반에 관한 분석적·학제적 연구를 게재하는 학술지입니다.
+        본 학술지는 경제, 공공정책, 국제관계, 안보, 법·제도, 기술과 혁신 등
+        다양한 분야와 주제를 폭넓게 다루며,
+        국내외 경제·사회 환경의 변화와 이에 대응하는 정책 및 제도의 역할, 글로벌 거버넌스의 형성과 재편
+        등을 다각도로 분석하고자 합니다.
+        또한 이론적 연구, 실증분석, 정책·문헌 서베이 등 다양한 형태의 학술적 기여를 환영하며,
+        경제·사회 현상과 국제적 상호작용에 대한 엄밀한 분석을 바탕으로
+        정책적 함의와 제도적 시사점을 제시하는 연구를 지향합니다.
+    </p>
+  </section>
+
+  <section class="journal-info">
+    <p>
+        <span class="info-label">발행 및 편집인</span>
+        <span class="info-value">허영수 (유니노믹연구소장, 세종대 경제학과)</span>
+    </p>
+  </section>
+  
+  <section class="journal-info">
+    <p>
+        <span class="info-label">논문 투고 및 문의</span>
+        <span class="info-value"><a href="mailto:uninomicstudies@gmail.com">uninomicstudies@gmail.com</a></span>
+    </p>
+  </section>
+    </div>
+
+    <!---------------------->
+    <!-- PANEL FOR ISSUES -->
+    <!---------------------->
+    <div id="issues-panel" class="tab-panel" role="tabpanel" aria-labelledby="issues-tab" hidden>
+  <section>
+    <!---------------- VOLUME 9 ---------------->
+    <details>
+      <summary>Volume 9</summary>
+
+      <!---------------->
+      <!--Vol. 9, No. 3-->
+      <!---------------->
+      <!--
+      <div class="issue">
+        <a href="issues/UR9-3/UR9-3_issue.pdf" target="_blank" rel="noopener"
+          onclick="gtag('event', 'pdf_click', {
+            'pub_label': 'NSR9-3'
+          })">
+          Vol. 9, No. 3, November 2026 (<i>in progress</i>)
+        </a>
+      -->
+
+        <span class="unpublished">
+          Vol. 9, No. 3, November 2026 (<i>in progress</i>)
+        </span>
+        <ul class="articles">
+            <li>
+              <div class="article-title">
+                [초청논단] G2 인프라 프로젝트: 상류 댐, 상수원 이전 및 북극점 항로 개발을 중심으로
+              <!--
+                &nbsp;[   
+                <a class="article-link" href="issues/NSR9-1/NSR9-1-01/NSR9-1-01.html"
+                  target="_blank" rel="noopener"
+                  onclick="gtag('event', 'pdf_click', {
+                  'pub_label': 'NSR9-1-01'
+                  })">html</a>
+                ]
+              
+              &nbsp;[
+                <a class="article-link" href="issues/NSR9-1/NSR9-1-01/NSR9-1-01.pdf"
+                 target="_blank" rel="noopener"
+                  onclick="gtag('event', 'pdf_click', {
+                  'pub_label': 'NSR9-1-01'
+                  })">pdf</a>
+                ]
+                -->
+              </div>
+              <div class="author"> 주명건 </div>
+            </li>
+          
+            <li>
+              <div class="article-title">
+                [초청논문] 상류댐 개발 타당성 분석
+                <!--
+                &nbsp;[   
+                <a class="article-link" href="issues/NSR9-1/NSR9-1-02/NSR9-1-02.html"
+                  target="_blank" rel="noopener"
+                  onclick="gtag('event', 'pdf_click', {
+                  'pub_label': 'NSR9-1-02'
+                  })">html</a>
+                ]
+              
+                &nbsp;[
+                <a class="article-link" href="issues/NSR9-1/NSR9-1-02/NSR9-1-02.pdf"
+                  target="_blank" rel="noopener"
+                  onclick="gtag('event', 'pdf_click', {
+                  'pub_label': 'NSR9-1-02'
+                  })">pdf</a>
+                ]
+                -->
+              </div>
+              <div class="author"> 정태웅, 정명채 </div>
+            </li>
+
+            <li>
+              <div class="article-title">
+                [초청논문] 상수원 이전 타당성과 경제성 분석
+                <!--
+                &nbsp;[   
+                <a class="article-link" href="issues/NSR9-1/NSR9-1-03/NSR9-1-03.html"
+                  target="_blank" rel="noopener"
+                  onclick="gtag('event', 'pdf_click', {
+                  'pub_label': 'NSR9-1-03'
+                  })">html</a>
+                ]
+              
+                &nbsp;[
+                <a class="article-link" href="issues/NSR9-1/NSR9-1-03/NSR9-1-03.pdf"
+                  target="_blank" rel="noopener"
+                  onclick="gtag('event', 'pdf_click', {
+                  'pub_label': 'NSR9-1-03'
+                  })">pdf</a>
+                ]
+                -->
+              </div>
+              <div class="author"> 정명채, 맹승규, 고영대, 이희찬 </div>
+            </li>
+
+            <li>
+              <div class="article-title">
+                [초청논문] 북극관통항로 컨테이너선 선단의 연중 운항 경제성 분석: 비용·편익 및 민감도 분석
+                <!--
+                &nbsp;[   
+                <a class="article-link" href="issues/NSR9-1/NSR9-1-04/NSR9-1-04.html"
+                  target="_blank" rel="noopener"
+                  onclick="gtag('event', 'pdf_click', {
+                  'pub_label': 'NSR9-1-04'
+                  })">html</a>
+                ]
+                
+                &nbsp;[
+                <a class="article-link" href="issues/NSR9-1/NSR9-1-04/NSR9-1-04.pdf"
+                  target="_blank" rel="noopener"
+                  onclick="gtag('event', 'pdf_click', {
+                  'pub_label': 'NSR9-1-04'
+                  })">pdf</a>
+                ]
+                -->
+              </div>
+              <div class="author"> 한승오 </div>
+            </li>
+      </ul>
+      <!--Vol. 9, No. 3 ended-->
+
+      <!-- Vol. 9, No. 2 -->
+      <div class="issue">
+        <a href="urev/UREV9-2/UREV9-2_issue.pdf" target="_blank" rel="noopener"
+          onclick="gtag('event', 'pdf_click', {
+            'pub_label': 'UREV9-2'
+          })">
+          Vol. 9, No. 2, June 2026</a>
+        <span>&nbsp;&nbsp;(Published by&nbsp;</span>
+        <a href="http://www.sejonginstitution.com/data/paper_list.php" target="_blank" rel="noopener">
+          Sejong Institution</a>
+        <span>)</span>
+      </div>
+      <ul class="articles">
+        <li>
+          <div class="article-title">
+            트럼프 정부의 대중국 반도체 수출통제의 실효성 분석
+            &nbsp;[
+            <a class="article-link" href="urev/UREV9-2/UREV9-2-01/UREV9-2-01.html"
+              target="_blank" rel="noopener"
+              onclick="gtag('event', 'pdf_click', {'pub_label': 'UREV9-2-01'})">html</a>
+            ]
+            &nbsp;[
+            <a class="article-link" href="urev/UREV9-2/UREV9-2-01/UREV9-2-01.pdf"
+              target="_blank" rel="noopener"
+              onclick="gtag('event', 'pdf_click', {'pub_label': 'UREV9-2-01'})">pdf</a>
+            ]
+          </div>
+          <div class="author">구기보</div>
+        </li>
+        <li>
+          <div class="article-title">
+            미국의 패권과 반도체 정책의 역설
+            &nbsp;[
+            <a class="article-link" href="urev/UREV9-2/UREV9-2-02/UREV9-2-02.html"
+              target="_blank" rel="noopener"
+              onclick="gtag('event', 'pdf_click', {'pub_label': 'UREV9-2-02'})">html</a>
+            ]
+            &nbsp;[
+            <a class="article-link" href="urev/UREV9-2/UREV9-2-02/UREV9-2-02.pdf"
+              target="_blank" rel="noopener"
+              onclick="gtag('event', 'pdf_click', {'pub_label': 'UREV9-2-02'})">pdf</a>
+            ]
+          </div>
+          <div class="author">이기완</div>
+        </li>
+        <li>
+          <div class="article-title">
+            미중 AI 반도체 전쟁: 한국에 주는 함의
+            &nbsp;[
+            <a class="article-link" href="urev/UREV9-2/UREV9-2-03/UREV9-2-03.html"
+              target="_blank" rel="noopener"
+              onclick="gtag('event', 'pdf_click', {'pub_label': 'UREV9-2-03'})">html</a>
+            ]
+            &nbsp;[
+            <a class="article-link" href="urev/UREV9-2/UREV9-2-03/UREV9-2-03.pdf"
+              target="_blank" rel="noopener"
+              onclick="gtag('event', 'pdf_click', {'pub_label': 'UREV9-2-03'})">pdf</a>
+            ]
+          </div>
+          <div class="author">이왕휘</div>
+        </li>
+        <li>
+          <div class="article-title">
+            [초청논단] G2 인프라 프로젝트 – 경부운하, 대군운하, 광목운하를 중심으로
+            &nbsp;[
+            <a class="article-link" href="urev/UREV9-2/UREV9-2-04/UREV9-2-04.html"
+              target="_blank" rel="noopener"
+              onclick="gtag('event', 'pdf_click', {'pub_label': 'UREV9-2-04'})">html</a>
+            ]
+            &nbsp;[
+            <a class="article-link" href="urev/UREV9-2/UREV9-2-04/UREV9-2-04.pdf"
+              target="_blank" rel="noopener"
+              onclick="gtag('event', 'pdf_click', {'pub_label': 'UREV9-2-04'})">pdf</a>
+            ]
+          </div>
+          <div class="author">주명건</div>
+        </li>
+        <li>
+          <div class="article-title">
+            경부운하 개발 타당성과 경제성 분석
+            &nbsp;[
+            <a class="article-link" href="urev/UREV9-2/UREV9-2-05/UREV9-2-05.html"
+              target="_blank" rel="noopener"
+              onclick="gtag('event', 'pdf_click', {'pub_label': 'UREV9-2-05'})">html</a>
+            ]
+            &nbsp;[
+            <a class="article-link" href="urev/UREV9-2/UREV9-2-05/UREV9-2-05.pdf"
+              target="_blank" rel="noopener"
+              onclick="gtag('event', 'pdf_click', {'pub_label': 'UREV9-2-05'})">pdf</a>
+            ]
+          </div>
+          <div class="author">정명채, 김정숙, 정태웅, 이희찬, 이환호</div>
+        </li>
+        <li>
+          <div class="article-title">
+            대군운하와 광목운하 개발 타당성과 경제성 분석
+            &nbsp;[
+            <a class="article-link" href="urev/UREV9-2/UREV9-2-06/UREV9-2-06.html"
+              target="_blank" rel="noopener"
+              onclick="gtag('event', 'pdf_click', {'pub_label': 'UREV9-2-06'})">html</a>
+            ]
+            &nbsp;[
+            <a class="article-link" href="urev/UREV9-2/UREV9-2-06/UREV9-2-06.pdf"
+              target="_blank" rel="noopener"
+              onclick="gtag('event', 'pdf_click', {'pub_label': 'UREV9-2-06'})">pdf</a>
+            ]
+          </div>
+          <div class="author">권현한, 김정숙, 정명채, 정태웅, 이환호, 이희찬</div>
+        </li>
+      </ul>
+      <!--Vol. 9, No. 2 ended-->
+
+      <!-- Vol. 9, No. 1 -->
+      <div class="issue">
+        <a href="urev/UREV9-1/UREV9-1_issue.pdf" target="_blank" rel="noopener"
+          onclick="gtag('event', 'pdf_click', {
+            'pub_label': 'UREV9-1'
+          })">
+          Vol. 9, No. 1, March 2026</a>
+        <span>&nbsp;&nbsp;(Published by&nbsp;</span>
+        <a href="http://www.sejonginstitution.com/data/paper_list.php" target="_blank" rel="noopener">
+          Sejong Institution</a>
+        <span>)</span>
+      </div>
+      <ul class="articles">
+        <li>
+          <div class="article-title">
+            한국의 핵심광물 공급망 리스크 완화 및 대외경제 협력 전략: 중앙아시아와 협력을 중심으로
+            &nbsp;[
+            <a class="article-link" href="urev/UREV9-1/UREV9-1-01/UREV9-1-01.pdf"
+              target="_blank" rel="noopener"
+              onclick="gtag('event', 'pdf_click', {'pub_label': 'UREV9-1-01'})">pdf</a>
+            ]
+          </div>
+          <div class="author">변현섭</div>
+        </li>
+        <li>
+          <div class="article-title">
+            글로벌 에너지 공급망 변화와 에너지 안보전략
+            &nbsp;[
+            <a class="article-link" href="urev/UREV9-1/UREV9-1-02/UREV9-1-02.pdf"
+              target="_blank" rel="noopener"
+              onclick="gtag('event', 'pdf_click', {'pub_label': 'UREV9-1-02'})">pdf</a>
+            ]
+          </div>
+          <div class="author">안상욱</div>
+        </li>
+        <li>
+          <div class="article-title">
+            에너지 전환의 비용과 안보: 독일 '그린플레이션' 논쟁의 최신 동향과 한국의 과제
+            &nbsp;[
+            <a class="article-link" href="urev/UREV9-1/UREV9-1-03/UREV9-1-03.pdf"
+              target="_blank" rel="noopener"
+              onclick="gtag('event', 'pdf_click', {'pub_label': 'UREV9-1-03'})">pdf</a>
+            ]
+          </div>
+          <div class="author">김현정</div>
+        </li>
+        <li>
+          <div class="article-title">
+            태양광 및 풍력 설비의 공급망 현황을 통해 본 국가 에너지 안보에 대한 고찰
+            &nbsp;[
+            <a class="article-link" href="urev/UREV9-1/UREV9-1-04/UREV9-1-04.pdf"
+              target="_blank" rel="noopener"
+              onclick="gtag('event', 'pdf_click', {'pub_label': 'UREV9-1-04'})">pdf</a>
+            ]
+          </div>
+          <div class="author">노경완</div>
+        </li>
+        <li>
+          <div class="article-title">
+            중국의 로봇 및 AI 산업 육성정책이 국제 지식재산권 보호체계(TRIPs)에 미치는 영향 -특허보호 강화 및 기술이전 강요 문제를 중심으로-
+            &nbsp;[
+            <a class="article-link" href="urev/UREV9-1/UREV9-1-05/UREV9-1-05.pdf"
+              target="_blank" rel="noopener"
+              onclick="gtag('event', 'pdf_click', {'pub_label': 'UREV9-1-05'})">pdf</a>
+            ]
+          </div>
+          <div class="author">강문경</div>
+        </li>
+      </ul>
+      <!--Vol. 9, No. 1 ended-->
+
+    </details>
+    <!---------------- Vol. 9 ended ------------>
+
+    <details>
+      <summary>Volumes 1-8</summary>
+      <div>Available at
+        <a href="http://www.sejonginstitution.com/data/paper_list.php"
+        target="_blank" rel="noopener">Sejong Institution (세종연구원)</a>
+      </div>
+    </details>
+  </section>
+    </div>
+  </main>
+
+  <script>
+    function showTab(name, updateHistory = true) {
+      const tab = name === 'issues' ? 'issues' : 'about';
+      for (const item of ['about', 'issues']) {
+        const selected = item === tab;
+        document.getElementById(item + '-panel').hidden = !selected;
+        document.getElementById(item + '-tab').setAttribute('aria-selected', String(selected));
+        document.getElementById(item + '-tab').tabIndex = selected ? 0 : -1;
+      }
+      if (updateHistory && location.hash !== '#' + tab) {
+        history.pushState(null, '', '#' + tab);
+      }
+    }
+    window.addEventListener('popstate', () => showTab(location.hash.slice(1), false));
+    showTab(location.hash.slice(1), false);
+  </script>
+</body>
+</html>
